@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>require 'minitest/autorun'
+
+class ${TM_FILENAME/(\w*)_test\.rb/\u$1/g}Test &lt; MiniTest::Unit::TestCase
+	$0
+end
+</string>
+	<key>name</key>
+	<string>minitest</string>
+	<key>scope</key>
+	<string>source.ruby</string>
+	<key>tabTrigger</key>
+	<string>minitest</string>
+	<key>uuid</key>
+	<string>2C880150-2E22-475D-9CDC-97A7564AAD6A</string>
+</dict>
+</plist>
