@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>jshint $TM_FILEPATH --config $TM_PROJECT_DIRECTORY/.jshintrc &amp;&amp; echo Lint Free!</string>
+	<key>fallbackInput</key>
+	<string>document</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>^l</string>
+	<key>name</key>
+	<string>jshint</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>A9443242-AB38-47C9-B0CD-C6743E040367</string>
+</dict>
+</plist>
