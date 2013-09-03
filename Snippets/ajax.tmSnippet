@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>$.ajax({
+	url: ${1:'${2:/api/foo}'}
+}).done(function(data) {
+	$3
+}).fail(function(xhr) {
+	$0
+});</string>
+	<key>name</key>
+	<string>ajax</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>ajax</string>
+	<key>uuid</key>
+	<string>B8FE26D6-149A-4290-B1DF-CF9E5E65CD79</string>
+</dict>
+</plist>
