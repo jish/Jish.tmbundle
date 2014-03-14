@@ -5,20 +5,40 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>jshint $TM_FILEPATH --config $TM_PROJECT_DIRECTORY/.jshintrc &amp;&amp; echo Lint Free!</string>
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+if [[ -x $TM_PROJECT_DIRECTORY/node_modules/jshint/bin/hint ]]; then
+  jshint=$TM_PROJECT_DIRECTORY/node_modules/jshint/bin/hint;
+fi
+
+if [[ -x $TM_PROJECT_DIRECTORY/node_modules/jshint/bin/jshint ]]; then
+  jshint=$TM_PROJECT_DIRECTORY/node_modules/jshint/bin/jshint;
+fi
+
+$jshint $TM_FILEPATH --config $TM_PROJECT_DIRECTORY/.jshintrc &amp;&amp; echo Lint Free!
+</string>
 	<key>fallbackInput</key>
 	<string>document</string>
 	<key>input</key>
 	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^l</string>
 	<key>name</key>
 	<string>jshint</string>
-	<key>output</key>
-	<string>showAsTooltip</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>toolTip</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>uuid</key>
 	<string>A9443242-AB38-47C9-B0CD-C6743E040367</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
