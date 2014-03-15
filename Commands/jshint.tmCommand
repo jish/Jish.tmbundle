@@ -16,7 +16,12 @@ if [[ -x $TM_PROJECT_DIRECTORY/node_modules/jshint/bin/jshint ]]; then
   jshint=$TM_PROJECT_DIRECTORY/node_modules/jshint/bin/jshint;
 fi
 
-$jshint $TM_FILEPATH --config $TM_PROJECT_DIRECTORY/.jshintrc &amp;&amp; echo Lint Free!
+config=''
+if [[ -f $TM_PROJECT_DIRECTORY/.jshintrc ]]; then
+  config='--config $TM_PROJECT_DIRECTORY/.jshintrc';
+fi
+
+$jshint $TM_FILEPATH $config &amp;&amp; echo Lint Free!
 </string>
 	<key>fallbackInput</key>
 	<string>document</string>
