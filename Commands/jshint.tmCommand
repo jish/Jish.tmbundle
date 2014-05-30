@@ -18,7 +18,7 @@ fi
 
 config=''
 if [[ -f $TM_PROJECT_DIRECTORY/.jshintrc ]]; then
-  config='--config $TM_PROJECT_DIRECTORY/.jshintrc';
+  config="--config $TM_PROJECT_DIRECTORY/.jshintrc";
 fi
 
 $jshint $TM_FILEPATH $config &amp;&amp; echo Lint Free!
